@@ -1,0 +1,80 @@
+filetype plugin indent on
+syntax on
+set nocompatible
+  
+set number
+set relativenumber
+set ruler
+        
+set encoding=utf-8
+
+set wrap
+set textwidth=80
+set shiftwidth=2
+set tabstop=2
+set expandtab
+
+set showmode
+set showcmd
+
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+" set showmatch
+
+set smartindent
+set t_Co=256
+
+"""""""""""""""""""""""""""""""""""""""""""
+" set statusline
+set laststatus=2
+let g:airline#extensions#tabline#enabled=1
+let g:airline_theme='papercolor'
+let g:airline_powerline_fonts=1
+"""""""""""""""""""""""""""""""""""""""""""
+
+
+"""""""""""""""""""""""""""""""""""""""""""
+" set cursor shape
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+set ttimeout
+set ttimeoutlen=1
+set listchars=tab:>-,trail:~,extends:>,precedes:<,space:.
+set ttyfast
+"""""""""""""""""""""""""""""""""""""""""""
+
+
+"""""""""""""""""""""""""""""""""""""""""""
+" key map
+" set leader key
+let mapleader = " "
+
+" search in insert mode
+inoremap <c-s> <esc>/
+
+" cursor move
+inoremap <C-f> <c-O>l
+inoremap <C-b> <c-O>h
+inoremap <C-p> <c-O>k
+inoremap <C-n> <c-O>j
+
+" open .vimrc file
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
+" tab related
+nnoremap <leader>t :tabnew 
+nnoremap <leader>n gt
+nnoremap <leader>p gT
+" key map
+"""""""""""""""""""""""""""""""""""""""""""
+
+
+"""""""""""""""""""""""""""""""""""""""""""
+" snippet
+"
+" snippet
+"""""""""""""""""""""""""""""""""""""""""""
