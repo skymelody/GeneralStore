@@ -26,13 +26,6 @@ set smartcase
 set smartindent
 set t_Co=256
 
-"""""""""""""""""""""""""""""""""""""""""""
-" set statusline
-set laststatus=2
-let g:airline#extensions#tabline#enabled=1
-let g:airline_theme='papercolor'
-let g:airline_powerline_fonts=1
-"""""""""""""""""""""""""""""""""""""""""""
 
 
 """""""""""""""""""""""""""""""""""""""""""
@@ -66,15 +59,36 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " tab related
-nnoremap <leader>t :tabnew 
-nnoremap <leader>n gt
-nnoremap <leader>p gT
+nnoremap <leader>tn :tabnew 
+nnoremap <leader>tl gt
+nnoremap <leader>th gT
 " key map
 """""""""""""""""""""""""""""""""""""""""""
+
+
 
 
 """""""""""""""""""""""""""""""""""""""""""
 " snippet
 "
 " snippet
+"""""""""""""""""""""""""""""""""""""""""""
+
+
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""
+" set statusline, vim-airline
+set laststatus=2
+let g:airline#extensions#tabline#enabled=1
+let g:airline_theme='papercolor'
+let g:airline_powerline_fonts=1
+"""""""""""""""""""""""""""""""""""""""""""
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""
+" NerdTred
+nnoremap <leader>ff :NERDTreeToggle<cr>
 """""""""""""""""""""""""""""""""""""""""""
