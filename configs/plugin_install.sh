@@ -25,9 +25,7 @@ done
 index=0
 for plugin in "${plugin_urls[@]}"
 do
-  if [ ! -d "$plugin_install_path" ]; then
-    git clone "${plugin_urls[${index}]}" "${plugin_install_paths[${index}]}"
-  fi
+  git clone "${plugin_urls[${index}]}" "${plugin_install_paths[${index}]}"
   index=$((index+1))
 done
 
