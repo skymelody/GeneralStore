@@ -5,6 +5,7 @@ declare -a plugin_urls=(
 "https://github.com/vim-airline/vim-airline"
 "https://github.com/vim-airline/vim-airline-themes"
 "https://github.com/rhysd/vim-clang-format"
+"https://github.com/rakr/vim-one"
 # "https://github.com/ycm-core/YouCompleteMe"
 )
 

@@ -28,6 +28,17 @@ set cindent
 set t_Co=256
 
 
+if (empty($TMUX))
+  if (has("nvim"))
+    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  endif
+  if (has("termguicolors"))
+    set termguicolors
+  endif
+endif
+colorscheme one
+set background=dark
+
 
 """""""""""""""""""""""""""""""""""""""""""
 " set cursor shape
@@ -65,23 +76,7 @@ nnoremap <leader>tl gt
 nnoremap <leader>th gT
 
 " window move
-
-" key map
 """""""""""""""""""""""""""""""""""""""""""
-
-
-"""""""""""""""""""""""""""""""""""""""""""
-" c++
-"""""""""""""""""""""""""""""""""""""""""""
-
-
-"""""""""""""""""""""""""""""""""""""""""""
-" snippet
-"
-" snippet
-"""""""""""""""""""""""""""""""""""""""""""
-
-
 
 
 
@@ -89,7 +84,7 @@ nnoremap <leader>th gT
 " set statusline, vim-airline
 set laststatus=2
 let g:airline#extensions#tabline#enabled=1
-let g:airline_theme='papercolor'
+let g:airline_theme='one'
 let g:airline_powerline_fonts=1
 """""""""""""""""""""""""""""""""""""""""""
 
