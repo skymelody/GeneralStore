@@ -24,6 +24,7 @@ set smartcase
 " set showmatch
 
 set smartindent
+set cindent
 set t_Co=256
 
 
@@ -62,10 +63,16 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>tn :tabnew 
 nnoremap <leader>tl gt
 nnoremap <leader>th gT
+
+" window move
+
 " key map
 """""""""""""""""""""""""""""""""""""""""""
 
 
+"""""""""""""""""""""""""""""""""""""""""""
+" c++
+"""""""""""""""""""""""""""""""""""""""""""
 
 
 """""""""""""""""""""""""""""""""""""""""""
@@ -91,4 +98,60 @@ let g:airline_powerline_fonts=1
 """""""""""""""""""""""""""""""""""""""""""
 " NerdTred
 nnoremap <leader>ff :NERDTreeToggle<cr>
+"""""""""""""""""""""""""""""""""""""""""""
+
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""
+" ClangFormat
+" work in clang-format 11
+autocmd FileType c,cpp ClangFormatAutoEnable
+let g:clang_format#detect_style_file = 0
+let g:clang_format#style_options = {
+            \ "AccessModifierOffset" : -2,
+            \ "AlignAfterOpenBracket" : "Align",
+            \ "AlignConsecutiveBitFields" : "true",
+            \ "AlignConsecutiveMacros" : "true",
+            \ "AlignEscapedNewlines" : "Right",
+            \ "AlignTrailingComments" : "true",
+            \ "AllowAllArgumentsOnNextLine" : "false",
+            \ "AllowAllConstructorInitializersOnNextLine" : "false",  
+            \ "AllowAllParametersOfDeclarationOnNextLine" : "false",
+            \ "AllowShortBlocksOnASingleLine" : "Empty",
+            \ "AllowShortCaseLabelsOnASingleLine" : "false",
+            \ "AllowShortEnumsOnASingleLine" : "false",
+            \ "AllowShortFunctionsOnASingleLine" : "Empty",
+            \ "AllowShortIfStatementsOnASingleLine" : "Never",
+            \ "AllowShortLambdasOnASingleLine" : "None",
+            \ "AllowShortLoopsOnASingleLine" : "false",
+            \ "AlwaysBreakAfterReturnType" : "None",
+            \ "AlwaysBreakTemplateDeclarations" : "Yes",
+            \ "BinPackArguments" : "true",
+            \ "BinPackParameters" : "true",
+            \ "BreakBeforeBraces" : "Custom",
+            \ "BraceWrapping" : {
+              \ "AfterCaseLabel" : "false",
+              \ "AfterClass" : "false",
+              \ "AfterEnum" : "false",
+              \ "AfterFunction" : "false",
+              \ "AfterNamespace" : "false",
+              \ "AfterStruct" : "false", 
+              \ "AfterUnion" : "false", 
+              \ "AfterExternBlock" : "false", 
+              \ "BeforeCatch" : "true",
+              \ "BeforeElse" : "true", 
+              \ "BeforeLambdaBody" : "false",
+              \ "BeforeWhile" : "true"},
+            \ "BreakBeforeTernaryOperators" : "true",
+            \ "BreakConstructorInitializers" : "AfterColon",
+            \ "BreakInheritanceList" : "AfterColon",
+            \ "BreakStringLiterals" : "true",
+            \ "CompactNamespaces" : "false",
+            \ "ConstructorInitializerAllOnOneLineOrOnePerLine" : "false",
+            \ "Cpp11BracedListStyle" : "false",
+            \ "FixNamespaceComments" : "true",
+            \ "IncludeBlocks" : "Regroup",
+            \ "IndentCaseLabels" : "false",
+            \ "Standard" : "C++11"}
 """""""""""""""""""""""""""""""""""""""""""
